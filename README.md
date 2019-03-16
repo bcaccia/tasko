@@ -5,6 +5,6 @@ Tasko is a command line todo app. It can take tasks as arguments, or it can be r
 **Features**
 
 * Add tasks, delete, rename tasks
-* Sort tasks by date added, due date, priority, category
+* Sort tasks by date added, due date, priority, context
 * Pass arguments at CLI
 * Run in interactive mode
