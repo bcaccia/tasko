@@ -7,7 +7,7 @@ public class Main {
 			System.out.println("interactive mode");
 		}
 		else {
-			// TODO add code to take CLI args
+			Core.splitArgs(args);
 		}
 
 	}
