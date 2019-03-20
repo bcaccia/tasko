@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author bcaccia
- *
- */
-module tasko {
-}
