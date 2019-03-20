@@ -45,11 +45,10 @@ public class Task {
 	}
 
 	public static void menuOptions() {
-		Scanner input = new Scanner(System.in);
-		char userInput = input.next().toLowerCase().charAt(0);
+		char userInput = Main.input.next().toLowerCase().charAt(0);
 		switch (userInput) {
 			case 'a' :
-				System.out.println("a");
+				addTask();
 				break;
 
 			case 'd' :
@@ -77,18 +76,25 @@ public class Task {
 				System.out.println("Invalid");
 				break;
 		}
-		input.close();
 	}
 
 	public static void addTask() {
-		Scanner input = new Scanner(System.in);
 		String summary;
 		Character priority;
 		String context;
 
 		System.out.println("Enter task summary: ");
-		summary = input.next();
+		summary = Main.input.nextLine();
 		System.out.println(summary);
+
+		System.out.println("Enter priority: ");
+		priority = Main.input.nextLine().charAt(0);
+		System.out.println(priority);
+
+		System.out.println("Enter context: ");
+		context = Main.input.nextLine();
+		System.out.println(context);
+
 	}
 
 	// Parse input arguments into usable pieces
