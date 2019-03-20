@@ -1,15 +1,36 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Date;
 
 public class Task {
-	
 
-	// TODO add constructor, use Date class in java.util
-	public Task() {
+	private String summary;
+	private char priority;
+	private String context;
+	private Date creationTime;
 
+	public Task(String summary, char priority, String context) {
+		this.summary = summary;
+		this.priority = priority;
+		this.context = context;
+		this.creationTime = new Date();
 	}
 
+	public String getSummary() {
+		return summary;
+	}
 
+	public char getPriority() {
+		return priority;
+	}
+
+	public String getContext() {
+		return context;
+	}
+
+	public Date getCreationTime() {
+		return creationTime;
+	}
+
+/*
 	public static void helpPage() {
 		System.out.println("_____________________________________________________");
 		System.out.println("\ntasko usage:");
@@ -86,5 +107,6 @@ public class Task {
 			helpPage();
 		}
 	}
+*/
 
 }
