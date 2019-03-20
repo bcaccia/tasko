@@ -3,32 +3,12 @@ import java.util.Scanner;
 
 public class Task {
 	
-	// TODO add attributes
-	// Date/Time, Priority, Context, Due Date
-	String taskSummary;
-	String[] priority = {"l", "m", "h"};
-	String context;
-	
-	
+
 	// TODO add constructor, use Date class in java.util
-	public Task(String taskSummary, String[] priority, String context) {
-		this.taskSummary = taskSummary;
-		this.priority = priority;
-		this.context = context;
-		
+	public Task() {
+
 	}
-	
-	// TODO add view task method
-	
-	// TODO add delete method
-	
-	// TODO add edit method
-	
-	// TODO add change category method
-	
-	// TODO add set priority method
-	
-	// TODO add due date method
+
 
 	public static void helpPage() {
 		System.out.println("_____________________________________________________");
@@ -85,15 +65,12 @@ public class Task {
 
 		System.out.println("Enter task summary: ");
 		summary = Main.input.nextLine();
-		System.out.println(summary);
 
 		System.out.println("Enter priority: ");
-		priority = Main.input.nextLine().charAt(0);
-		System.out.println(priority);
+		priority = Main.input.nextLine().toLowerCase().charAt(0);
 
 		System.out.println("Enter context: ");
 		context = Main.input.nextLine();
-		System.out.println(context);
 
 	}
 
