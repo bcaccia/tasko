@@ -3,34 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	public class TaskFactory {
-		ArrayList<Task> taskList = new ArrayList<>();
 
-		public TaskFactory() {
-		}
-
-		public void addTask() {
-
-			String taskSummary;
-			String taskPriority;
-			String taskContext;
-
-			System.out.println("Enter task: ");
-			taskSummary = input.nextLine();
-
-			System.out.println("Enter priority: ");
-			taskPriority = input.nextLine().toLowerCase();
-
-			System.out.println("Enter context: ");
-			taskContext = input.nextLine();
-
-
-			Task newTask = new Task(taskSummary, taskPriority, taskContext);
-			taskList.add(newTask);
-		}
-
-
-	}
 
 	public static void commandHeader() {
 		System.out.println("_____________________________________________________________________________");
@@ -38,13 +11,12 @@ public class Main {
 		System.out.println("_____________________________________________________________________________");
 	}
 
-	public static void menuOptions() {
+	public static void menuOptions(TaskFactory taskFactory) {
 		Scanner input = new Scanner(System.in);
 		char userInput = input.next().toLowerCase().charAt(0);
 		switch (userInput) {
 			case 'a':
-				TaskFactory newTask = new TaskFactory();
-				newTask.addTask();
+				taskFactory.addTask();
 				break;
 
 			case 'd':
@@ -73,15 +45,16 @@ public class Main {
 		}
 	}
 
-	public Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		boolean runState = true;
-
+		ArrayList<Task> taskList = new ArrayList<>();
+		Task newTask = new Task();
+		TaskFactory taskFactory = new TaskFactory();
 
 		while (runState) {
 			commandHeader();
-			menuOptions();
+			menuOptions(taskFactory);
 		}
 
 	}

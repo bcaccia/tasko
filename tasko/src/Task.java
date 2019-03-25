@@ -14,6 +14,8 @@ public class Task {
         this.creationTime = LocalDateTime.now();
     }
 
+    public Task() {
+    }
 
     public String getSummary() {
         return summary;
