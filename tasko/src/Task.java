@@ -1,34 +1,62 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Task {
 
-	private String summary;
-	private char priority;
-	private String context;
-	private Date creationTime;
+    private String summary;
+    private String priority;
+    private String context;
+    private LocalDateTime creationTime;
 
-	public Task(String summary, char priority, String context) {
-		this.summary = summary;
-		this.priority = priority;
-		this.context = context;
-		this.creationTime = new Date();
-	}
+    public Task(String summary, String priority, String context) {
+        this.summary = summary;
+        this.priority = priority;
+        this.context = context;
+        this.creationTime = LocalDateTime.now();
+    }
 
-	public String getSummary() {
-		return summary;
-	}
 
-	public char getPriority() {
-		return priority;
-	}
+    public String getSummary() {
+        return summary;
+    }
 
-	public String getContext() {
-		return context;
-	}
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
 
-	public Date getCreationTime() {
-		return creationTime;
-	}
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public LocalDateTime getCreationTime() {
+        return creationTime;
+    }
+
+    public void setCreationTime(LocalDateTime creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "summary='" + summary + '\'' +
+                ", priority='" + priority + '\'' +
+                ", context='" + context + '\'' +
+                ", creationTime=" + creationTime +
+                '}';
+    }
+}
 
 /*
 	public static void helpPage() {
@@ -109,4 +137,5 @@ public class Task {
 	}
 */
 
-}
+
+

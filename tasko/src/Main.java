@@ -1,35 +1,35 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
+	public class TaskFactory {
+		ArrayList<Task> taskList = new ArrayList<>();
 
-	public static Task addTask() {
-		Scanner input = new Scanner(System.in);
+		public TaskFactory() {
+		}
 
-		String taskSummary;
-		char taskPriority;
-		String taskContext;
+		public void addTask() {
 
-		System.out.println("Enter task: ");
-		taskSummary = input.nextLine();
+			String taskSummary;
+			String taskPriority;
+			String taskContext;
 
-		System.out.println("Enter priority: ");
-		taskPriority = input.nextLine().toLowerCase().charAt(0);
+			System.out.println("Enter task: ");
+			taskSummary = input.nextLine();
 
-		System.out.println("Enter context: ");
-		taskContext = input.nextLine();
+			System.out.println("Enter priority: ");
+			taskPriority = input.nextLine().toLowerCase();
 
-		new Task(taskSummary, taskPriority, taskContext);
-	}
+			System.out.println("Enter context: ");
+			taskContext = input.nextLine();
 
-	public static void helpPage() {
-		System.out.println("_____________________________________________________");
-		System.out.println("\ntasko usage:");
-		System.out.println("\nCommand format: tasko taskSummary -priority -context");
-		System.out.println("Example command: tasko pay my bills -h -computer");
-		System.out.println("_____________________________________________________");
+
+			Task newTask = new Task(taskSummary, taskPriority, taskContext);
+			taskList.add(newTask);
+		}
+
+
 	}
 
 	public static void commandHeader() {
@@ -43,7 +43,8 @@ public class Main {
 		char userInput = input.next().toLowerCase().charAt(0);
 		switch (userInput) {
 			case 'a':
-				addTask();
+				TaskFactory newTask = new TaskFactory();
+				newTask.addTask();
 				break;
 
 			case 'd':
@@ -72,14 +73,18 @@ public class Main {
 		}
 	}
 
-	public static void main(String[] args) {
-			Task taskToBeAdded;
-			List<Task> taskList = new ArrayList<>();
+	public Scanner input = new Scanner(System.in);
 
-			while (true) {
-				commandHeader();
-				menuOptions();
-			}
+	public static void main(String[] args) {
+		boolean runState = true;
+
+
+		while (runState) {
+			commandHeader();
+			menuOptions();
+		}
+
+	}
 
 		/*
 		Task taskToBeAdded = new Task("here is a summary", 'l', "office");
@@ -95,5 +100,35 @@ public class Main {
 		System.out.println(taskList);
 		System.out.println(taskList.size());
 		*/
-	}
+
+//	public static Task addTask() {
+//		Scanner input = new Scanner(System.in);
+//
+//		String taskSummary;
+//		char taskPriority;
+//		String taskContext;
+//
+//		System.out.println("Enter task: ");
+//		taskSummary = input.nextLine();
+//
+//		System.out.println("Enter priority: ");
+//		taskPriority = input.nextLine().toLowerCase().charAt(0);
+//
+//		System.out.println("Enter context: ");
+//		taskContext = input.nextLine();
+//
+//		new Task(taskSummary, taskPriority, taskContext);
+//	}
+//
+//	public static void helpPage() {
+//		System.out.println("_____________________________________________________");
+//		System.out.println("\ntasko usage:");
+//		System.out.println("\nCommand format: tasko taskSummary -priority -context");
+//		System.out.println("Example command: tasko pay my bills -h -computer");
+//		System.out.println("_____________________________________________________");
+//	}
+//
+
+//
+
 }
