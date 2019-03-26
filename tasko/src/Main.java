@@ -3,12 +3,11 @@ public class Main {
 
     public static void main(String[] args) {
         TaskFactory taskFactory = new TaskFactory();
-        boolean runState = true;
 
-        while (runState) {
+        while (taskFactory.isRunState()) {
             taskFactory.commandHeader();
-            taskFactory.menuOptions();
             taskFactory.viewTasks();
+            taskFactory.menuOptions();
         }
 
 
