@@ -1,17 +1,21 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Task {
 
     private String summary;
     private String priority;
     private String context;
-    private LocalDateTime creationTime;
+    private LocalDateTime localTime;
+    private String creationTime;
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public Task(String summary, String priority, String context) {
         this.summary = summary;
         this.priority = priority;
         this.context = context;
-        this.creationTime = LocalDateTime.now();
+        this.localTime = LocalDateTime.now();
+        this.creationTime = localTime.format(formatter);
     }
 
     public Task() {
@@ -41,22 +45,20 @@ public class Task {
         this.context = context;
     }
 
-    public LocalDateTime getCreationTime() {
+    public String getCreationTime() {
         return creationTime;
     }
 
-    public void setCreationTime(LocalDateTime creationTime) {
+    public void setCreationTime(String creationTime) {
         this.creationTime = creationTime;
     }
 
     @Override
     public String toString() {
-        return "Task{" +
-                "summary='" + summary + '\'' +
+        return "summary='" + summary + '\'' +
                 ", priority='" + priority + '\'' +
                 ", context='" + context + '\'' +
-                ", creationTime=" + creationTime +
-                '}';
+                ", creationTime=" + creationTime;
     }
 }
 

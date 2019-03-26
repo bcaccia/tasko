@@ -1,14 +1,16 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
+import java.util.function.Function;
 
 public class TaskFactory {
-    Scanner input = new Scanner(System.in);
 
-    ArrayList<Task> taskList;
-    Task newTask;
+    private Scanner input;
+
+    private ArrayList<Task> taskList = new ArrayList<>();
+    private Task newTask;
 
 
     public TaskFactory() {
+        input = new Scanner(System.in);
     }
 
     public void addTask() {
@@ -29,15 +31,57 @@ public class TaskFactory {
 
         newTask = new Task(taskSummary, taskPriority, taskContext);
 
-        // TODO add new value to taskList
+        taskList.add(newTask);
     }
 
 
     public void viewTasks() {
+        int i = 0;
         for (Task x :
                 taskList) {
-            System.out.println(x.getSummary() + "," + x.getPriority() + "," + x.getContext() + "," + x.getCreationTime());
+            System.out.println(i + " | " + x.toString());
+            i++;
         }
 
+    }
+
+    public void commandHeader() {
+        System.out.println("_____________________________________________________________________________");
+        System.out.println("Commands: a(add) | d(delete) | p(priority) | c(context) | q(quit)");
+        System.out.println("_____________________________________________________________________________");
+    }
+
+    public void menuOptions() {
+        Scanner input = new Scanner(System.in);
+        char userInput = input.next().toLowerCase().charAt(0);
+        switch (userInput) {
+            case 'a':
+                addTask();
+                break;
+
+            case 'd':
+                System.out.println("d");
+                break;
+
+            case 'p':
+                System.out.println("p");
+                break;
+
+            case 'c':
+                System.out.println("c");
+                break;
+
+            case 's':
+                System.out.println("s");
+                break;
+
+            case 'q':
+                System.out.println("q");
+                break;
+
+            default:
+                System.out.println("Invalid");
+                break;
         }
     }
+}
