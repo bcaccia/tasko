@@ -13,7 +13,7 @@ public class TaskFactory {
         input = new Scanner(System.in);
     }
 
-    public void addTask() {
+    private void addTask() {
 
         String taskSummary;
         String taskPriority;
@@ -49,7 +49,7 @@ public class TaskFactory {
 
     }
 
-    public void sortAscPriority() {
+    private void sortAscPriority() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -60,7 +60,7 @@ public class TaskFactory {
         });
 
     }
-    public void sortDscPriority() {
+    private void sortDscPriority() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -72,7 +72,7 @@ public class TaskFactory {
 
     }
 
-public void sortAscContext() {
+private void sortAscContext() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -83,7 +83,7 @@ public void sortAscContext() {
         });
 
     }
-    public void sortDscContext() {
+    private void sortDscContext() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -95,7 +95,7 @@ public void sortAscContext() {
 
     }
 
-public void sortAscTime() {
+private void sortAscTime() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -106,7 +106,7 @@ public void sortAscTime() {
         });
 
     }
-    public void sortDscTime() {
+    private void sortDscTime() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 

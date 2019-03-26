@@ -6,15 +6,14 @@ public class Task {
     private String summary;
     private String priority;
     private String context;
-    private LocalDateTime localTime;
     private String creationTime;
-    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public Task(String summary, String priority, String context) {
         this.summary = summary;
         this.priority = priority;
         this.context = context;
-        this.localTime = LocalDateTime.now();
+        LocalDateTime localTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         this.creationTime = localTime.format(formatter);
     }
 
