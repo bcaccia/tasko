@@ -124,6 +124,8 @@ private void sortAscTime() {
         System.out.println("_____________________________________________________________________________");
     }
 
+
+//    TODO make this method listen for a key press instead of needing the user to press Enter after
     public void menuOptions() {
         Scanner input = new Scanner(System.in);
         char userInput = input.next().charAt(0);
