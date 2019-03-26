@@ -49,7 +49,6 @@ public class Main {
 	public static void main(String[] args) {
 		boolean runState = true;
 		ArrayList<Task> taskList = new ArrayList<>();
-		Task newTask = new Task();
 		TaskFactory taskFactory = new TaskFactory();
 
 		while (runState) {
