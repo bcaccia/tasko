@@ -79,10 +79,10 @@ public class Task {
 
     @Override
     public String toString() {
-        return "summary='" + summary + '\'' +
-                ", priority='" + priority + '\'' +
-                ", context='" + context + '\'' +
-                ", creationTime=" + creationTime;
+        return summary +
+                " | priority=" + priority +
+                " | context=" + context +
+                " | created=" + creationTime;
     }
 }
 

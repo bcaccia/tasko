@@ -10,8 +10,6 @@ public class TaskFactory {
     private boolean runState = true;
 
     private ArrayList<Task> taskList = new ArrayList<>();
-    private Task newTask;
-    private String sortState = "t";
     private static final String FILENAME = "taskList.csv";
 
     /**
@@ -27,7 +25,7 @@ public class TaskFactory {
     private void addTask() {
 
         String taskSummary;
-        String taskPriority = "";
+        String taskPriority;
         String taskContext;
         boolean runState = true;
 
@@ -48,7 +46,6 @@ public class TaskFactory {
             } else {
                 System.out.println("Only numbers allowed! Try again: ");
                 taskPriority = input.nextLine().toLowerCase();
-                continue;
             }
         }
 
@@ -56,7 +53,7 @@ public class TaskFactory {
         taskContext = input.nextLine();
 
 
-        newTask = new Task(taskSummary, taskPriority, taskContext);
+        Task newTask = new Task(taskSummary, taskPriority, taskContext);
 
         taskList.add(newTask);
     }
@@ -75,6 +72,7 @@ public class TaskFactory {
      * Prints out the contents of the taskList array to the screen
      */
     public void viewTasks() {
+        String sortState = "t";
         switch (sortState) {
             case "p":
                 sortAscPriority();
@@ -111,13 +109,7 @@ public class TaskFactory {
      */
     private void sortAscPriority() {
 
-        Collections.sort(taskList, new Comparator<Task>() {
-
-            public int compare(Task t1, Task t2) {
-
-                return String.valueOf(t1.getPriority()).compareTo(t2.getPriority());
-            }
-        });
+        taskList.sort((t1, t2) -> String.valueOf(t1.getPriority()).compareTo(t2.getPriority()));
 
     }
 
@@ -126,13 +118,7 @@ public class TaskFactory {
      */
     private void sortDscPriority() {
 
-        Collections.sort(taskList, new Comparator<Task>() {
-
-            public int compare(Task t1, Task t2) {
-
-                return String.valueOf(t2.getPriority()).compareTo(t1.getPriority());
-            }
-        });
+        taskList.sort((t1, t2) -> String.valueOf(t2.getPriority()).compareTo(t1.getPriority()));
 
     }
 
@@ -141,13 +127,7 @@ public class TaskFactory {
      */
     private void sortAscContext() {
 
-        Collections.sort(taskList, new Comparator<Task>() {
-
-            public int compare(Task t1, Task t2) {
-
-                return String.valueOf(t1.getContext()).compareTo(t2.getContext());
-            }
-        });
+        taskList.sort((t1, t2) -> String.valueOf(t1.getContext()).compareTo(t2.getContext()));
 
     }
 
@@ -156,13 +136,7 @@ public class TaskFactory {
      */
     private void sortDscContext() {
 
-        Collections.sort(taskList, new Comparator<Task>() {
-
-            public int compare(Task t1, Task t2) {
-
-                return String.valueOf(t2.getContext()).compareTo(t1.getContext());
-            }
-        });
+        taskList.sort((t1, t2) -> String.valueOf(t2.getContext()).compareTo(t1.getContext()));
 
     }
 
@@ -171,13 +145,7 @@ public class TaskFactory {
      */
     public void sortAscTime() {
 
-        Collections.sort(taskList, new Comparator<Task>() {
-
-            public int compare(Task t1, Task t2) {
-
-                return String.valueOf(t1.getCreationTime()).compareTo(t2.getCreationTime());
-            }
-        });
+        taskList.sort((t1, t2) -> String.valueOf(t1.getCreationTime()).compareTo(t2.getCreationTime()));
 
     }
 
@@ -186,13 +154,7 @@ public class TaskFactory {
      */
     private void sortDscTime() {
 
-        Collections.sort(taskList, new Comparator<Task>() {
-
-            public int compare(Task t1, Task t2) {
-
-                return String.valueOf(t2.getCreationTime()).compareTo(t1.getCreationTime());
-            }
-        });
+        taskList.sort((t1, t2) -> String.valueOf(t2.getCreationTime()).compareTo(t1.getCreationTime()));
 
     }
 
@@ -307,7 +269,7 @@ public class TaskFactory {
     public void readFromFile() {
         BufferedReader br = null;
         File f = new File(".", FILENAME);
-        String line = "";
+        String line;
         String splitBy = "\t";
 
         // Check if the file exists first. If it doesn't, continue on with the execution of the program.
@@ -324,8 +286,6 @@ public class TaskFactory {
                     taskList.add(tempTask);
                 }
 
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
@@ -337,8 +297,6 @@ public class TaskFactory {
                     }
                 }
             }
-        } else {
-
         }
     }
 }
