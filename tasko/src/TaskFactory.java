@@ -16,15 +16,29 @@ public class TaskFactory {
     private void addTask() {
 
         String taskSummary;
-        String taskPriority;
+        String taskPriority = "";
         String taskContext;
+        boolean runState = true;
 
         System.out.println("Enter task: ");
         taskSummary = input.nextLine();
 
-        System.out.println("Enter priority: ");
+        System.out.println("Enter a priority #1-3: ");
         taskPriority = input.nextLine().toLowerCase();
-//        TODO limit input to numerical priority
+
+        while (runState) {
+            if (taskPriority.equalsIgnoreCase("1") ||
+                    taskPriority.equalsIgnoreCase("2") ||
+                    taskPriority.equalsIgnoreCase("3")) {
+
+                runState = false;
+
+            } else {
+                System.out.println("Only numbers allowed! Try again: ");
+                taskPriority = input.nextLine().toLowerCase();
+                continue;
+            }
+        }
 
         System.out.println("Enter context: ");
         taskContext = input.nextLine();
@@ -132,7 +146,6 @@ private void sortAscTime() {
     }
 
 
-//    TODO make this method listen for a key press instead of needing the user to press Enter after
     public void menuOptions() {
         Scanner input = new Scanner(System.in);
         char userInput = input.next().charAt(0);

@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/tasko/src/TaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasko/src/TaskFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +26,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tasko/src/TaskFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+            <state relative-caret-position="293">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+              <folding>
+                <element signature="e#225#226#0" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasko/src/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="645">
               <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,26 +106,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="tasko" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasko" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tasko" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasko" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553629667247" />
@@ -231,7 +219,21 @@
       <option name="project" value="LOCAL" />
       <updated>1553629665621</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added deleteTask()">
+      <created>1553704305051</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1553704305051</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added deleteTask()">
+      <created>1553707472186</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1553707472186</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -256,7 +258,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5012346" side_tool="true" weight="0.25378788" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3327869" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3327869" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,7 +290,8 @@
     <MESSAGE value="Implemented basic sorting based on the different categories." />
     <MESSAGE value="Narrowed scope of some methods." />
     <MESSAGE value="Added a todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a todo" />
+    <MESSAGE value="Added deleteTask()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added deleteTask()" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tasko/.gitignore">
@@ -318,7 +321,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tasko/src/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="645">
           <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -328,8 +331,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tasko/src/TaskFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+        <state relative-caret-position="293">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding>
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
