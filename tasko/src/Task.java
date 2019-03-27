@@ -1,6 +1,10 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * This class defines the data structure of a task object. It is to be instantiated
+ * and used within the TaskFactory class.
+ */
 public class Task {
 
     private String summary;

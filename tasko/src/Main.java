@@ -10,6 +10,7 @@ public class Main {
             taskFactory.menuOptions();
         }
 
+        taskFactory.writeToFile();
 
     }
 

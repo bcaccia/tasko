@@ -1,5 +1,11 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
+/**
+ * This class contains most of the methods and logic for the program.
+ */
 public class TaskFactory {
 
     private Scanner input;
@@ -7,12 +13,18 @@ public class TaskFactory {
 
     private ArrayList<Task> taskList = new ArrayList<>();
     private Task newTask;
+    private static final String FILENAME = "taskList.csv";
 
-
+    /**
+     * Constructor
+     */
     public TaskFactory() {
         input = new Scanner(System.in);
     }
 
+    /**
+     * Adds a task to the current instances taskList variable
+     */
     private void addTask() {
 
         String taskSummary;
@@ -26,6 +38,7 @@ public class TaskFactory {
         System.out.println("Enter a priority #1-3: ");
         taskPriority = input.nextLine().toLowerCase();
 
+        // Verifies that only a number of 1-3 is being entered for the priority.
         while (runState) {
             if (taskPriority.equalsIgnoreCase("1") ||
                     taskPriority.equalsIgnoreCase("2") ||
@@ -49,10 +62,18 @@ public class TaskFactory {
         taskList.add(newTask);
     }
 
+    /**
+     * This is the getter for the instances runState variable. When the user chooses to quit the program
+     * it is set to false which causes the main() loop to quit
+     * @return a boolean
+     */
     public boolean isRunState() {
         return runState;
     }
 
+    /**
+     * Prints out the contents of the taskList array to the screen
+     */
     public void viewTasks() {
         int i = 0;
         for (Task x :
@@ -63,6 +84,9 @@ public class TaskFactory {
 
     }
 
+    /**
+     * Sorts the Priority in a ascending order
+     */
     private void sortAscPriority() {
 
         Collections.sort(taskList, new Comparator<Task>(){
@@ -74,6 +98,10 @@ public class TaskFactory {
         });
 
     }
+
+    /**
+     * Sorts the Priority in a descending order
+     */
     private void sortDscPriority() {
 
         Collections.sort(taskList, new Comparator<Task>(){
@@ -86,7 +114,10 @@ public class TaskFactory {
 
     }
 
-private void sortAscContext() {
+    /**
+     * Sorts the Context in a ascending order
+     */
+    private void sortAscContext() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -97,6 +128,10 @@ private void sortAscContext() {
         });
 
     }
+
+    /**
+     * Sorts the Context in a descending order
+     */
     private void sortDscContext() {
 
         Collections.sort(taskList, new Comparator<Task>(){
@@ -109,7 +144,10 @@ private void sortAscContext() {
 
     }
 
-private void sortAscTime() {
+    /**
+     * Sorts the Time in a ascending order
+     */
+    private void sortAscTime() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -120,6 +158,10 @@ private void sortAscTime() {
         });
 
     }
+
+    /**
+     * Sorts the Time in a descending order
+     */
     private void sortDscTime() {
 
         Collections.sort(taskList, new Comparator<Task>(){
@@ -132,6 +174,9 @@ private void sortAscTime() {
 
     }
 
+    /**
+     * Deletes an item from the taskList
+     */
     private void deleteTask() {
         System.out.println("Enter task # to delete: ");
         String userInput = input.nextLine();
@@ -139,13 +184,18 @@ private void sortAscTime() {
         taskList.remove(choice);
     }
 
+    /**
+     * Prints the command header to the console
+     */
     public void commandHeader() {
         System.out.println("_____________________________________________________________________________");
         System.out.println("Commands: a(add) | d(delete) | p(priority) | c(context) | t(time) | q(quit)");
         System.out.println("_____________________________________________________________________________");
     }
 
-
+    /**
+     * Executes the appropriate function based on the clients selection
+     */
     public void menuOptions() {
         Scanner input = new Scanner(System.in);
         char userInput = input.next().charAt(0);
@@ -191,4 +241,40 @@ private void sortAscTime() {
                 break;
         }
     }
+
+    /**
+     * Write the taskList to a .csv formatted file
+     */
+    public void writeToFile() {
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+
+        try {
+            fw = new FileWriter(FILENAME);
+            bw = new BufferedWriter(fw);
+
+            for (Task x :
+                    taskList) {
+                bw.write(x.getSummary() + ", "
+                + x.getPriority() + ", "
+                + x.getCreationTime() + "\n");
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bw != null)
+                    bw.close();
+
+                if (fw != null)
+                    fw.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }
