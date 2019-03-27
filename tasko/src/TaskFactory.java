@@ -8,7 +8,7 @@ public class TaskFactory {
 
     private Scanner input;
     private boolean runState = true;
-
+    private String sortState = "t";
     private ArrayList<Task> taskList = new ArrayList<>();
     private static final String FILENAME = "taskList.csv";
 
@@ -72,7 +72,6 @@ public class TaskFactory {
      * Prints out the contents of the taskList array to the screen
      */
     public void viewTasks() {
-        String sortState = "t";
         switch (sortState) {
             case "p":
                 sortAscPriority();
@@ -193,26 +192,32 @@ public class TaskFactory {
                 break;
 
             case 'p':
+                sortState = "p";
                 sortAscPriority();
                 break;
 
             case 'P':
+                sortState = "P";
                 sortDscPriority();
                 break;
 
             case 'c':
+                sortState = "c";
                 sortAscContext();
                 break;
 
             case 'C':
+                sortState = "C";
                 sortDscContext();
                 break;
 
             case 't':
+                sortState = "t";
                 sortAscTime();
                 break;
 
             case 'T':
+                sortState = "T";
                 sortDscTime();
                 break;
 

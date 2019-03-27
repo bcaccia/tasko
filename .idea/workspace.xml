@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe4db2b-d5de-4cb6-91ff-5739ca31799e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/bcaccia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasko/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasko/src/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasko/src/TaskFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/tasko/src/TaskFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,77 +21,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasko/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasko/src/TaskFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="144" column="7" lean-forward="true" selection-start-line="144" selection-start-column="7" selection-end-line="144" selection-end-column="7" />
-              <folding>
-                <element signature="docComment;class#TaskFactory#0" />
-                <element signature="docComment;method#TaskFactory#0;class#TaskFactory#0" />
-                <element signature="docComment;method#addTask#0;class#TaskFactory#0" />
-                <element signature="method#addTask#0;class#TaskFactory#0" />
-                <element signature="e#726#1140#1" />
-                <element signature="e#896#947#1" />
-                <element signature="e#953#1130#1" />
-                <element signature="docComment;method#isRunState#0;class#TaskFactory#0" />
-                <element signature="docComment;method#viewTasks#0;class#TaskFactory#0" />
-                <element signature="method#viewTasks#0;class#TaskFactory#0" />
-                <element signature="e#2060#2527#0" />
-                <element signature="e#1865#1951#1" />
-                <element signature="docComment;method#sortAscPriority#0;class#TaskFactory#0" />
-                <element signature="method#sortAscPriority#0;class#TaskFactory#0" />
-                <element signature="docComment;method#sortDscPriority#0;class#TaskFactory#0" />
-                <element signature="method#sortDscPriority#0;class#TaskFactory#0" />
-                <element signature="docComment;method#sortAscContext#0;class#TaskFactory#0" />
-                <element signature="method#sortAscContext#0;class#TaskFactory#0" />
-                <element signature="docComment;method#sortDscContext#0;class#TaskFactory#0" />
-                <element signature="method#sortDscContext#0;class#TaskFactory#0" />
-                <element signature="docComment;method#sortAscTime#0;class#TaskFactory#0" />
-                <element signature="method#sortAscTime#0;class#TaskFactory#0" />
-                <element signature="docComment;method#sortDscTime#0;class#TaskFactory#0" />
-                <element signature="method#sortDscTime#0;class#TaskFactory#0" />
-                <element signature="docComment;method#deleteTask#0;class#TaskFactory#0" />
-                <element signature="method#deleteTask#0;class#TaskFactory#0" />
-                <element signature="docComment;method#commandHeader#0;class#TaskFactory#0" />
-                <element signature="method#commandHeader#0;class#TaskFactory#0" />
-                <element signature="docComment;method#menuOptions#0;class#TaskFactory#0" />
-                <element signature="method#menuOptions#0;class#TaskFactory#0" />
-                <element signature="e#4889#5696#0" />
-                <element signature="docComment;method#writeToFile#0;class#TaskFactory#0" />
-                <element signature="method#writeToFile#0;class#TaskFactory#0" />
-                <element signature="e#6052#6078#0" />
-                <element signature="e#6310#6396#1" />
-                <element signature="e#6278#6322#0" />
-                <element signature="e#6540#6567#0" />
-                <element signature="e#6558#6593#0" />
-                <element signature="e#6660#6712#0" />
-                <element signature="docComment;method#readFromFile#0;class#TaskFactory#0" />
-                <element signature="method#readFromFile#0;class#TaskFactory#0" />
-                <element signature="e#7638#8367#1" />
-                <element signature="e#6877#7065#0" />
-                <element signature="e#7006#7063#1" />
-                <element signature="e#8137#8189#0" />
-                <element signature="e#7352#7381#0" />
-                <element signature="e#7382#7417#1" />
-                <element signature="e#7404#7455#0" />
-                <element signature="e#7478#7538#0" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tasko/src/TaskFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1408">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tasko/src/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+            <state relative-caret-position="186">
+              <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+              <folding>
+                <element signature="docComment;class#Task#0" />
+                <element signature="docComment;method#Task#0;class#Task#0" />
+                <element signature="method#Task#0;class#Task#0" />
+                <element signature="docComment;method#Task#1;class#Task#0" />
+                <element signature="method#Task#1;class#Task#0" />
+                <element signature="method#Task#2;class#Task#0" />
+                <element signature="e#1449#1450#0" expanded="true" />
+                <element signature="e#1480#1481#0" expanded="true" />
+                <element signature="method#toString#0;class#Task#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,8 +91,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tasko/src/TaskList.java" />
         <option value="$PROJECT_DIR$/tasko/src/Main.java" />
-        <option value="$PROJECT_DIR$/tasko/src/TaskFactory.java" />
         <option value="$PROJECT_DIR$/tasko/src/Task.java" />
+        <option value="$PROJECT_DIR$/tasko/src/TaskFactory.java" />
       </list>
     </option>
   </component>
@@ -176,7 +134,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553722670841" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553725006593" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
@@ -328,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553721721173</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Cleaned up code based on IDE suggestions, changed formatting of Task.toString()">
+      <created>1553722745140</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1553722745140</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -344,7 +309,7 @@
     <frame x="-1" y="-1" width="1368" height="734" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49388754" weight="0.4628788" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49388754" visible="true" weight="0.2128788" />
       <window_info id="Structure" order="1" sideWeight="0.50611246" side_tool="true" weight="0.26136363" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -364,13 +329,13 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32786885" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" x="0" y="0" width="291" height="532" id="Documentation" order="7" side_tool="true" weight="0.32954547" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" x="0" y="0" width="291" height="532" id="Documentation" order="6" side_tool="true" weight="0.32954547" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" id="Maven" order="8" weight="0.32954547" />
     </layout>
   </component>
@@ -390,7 +355,12 @@
     <MESSAGE value="Implemented writeToFile" />
     <MESSAGE value="Implemented readFromFile(). Ensured that file is read from on startup and that tasks are initially sorted by sortAscTime." />
     <MESSAGE value="Added sortState check to viewTasks(). Added a check to readFromFile to check if a file exists before loading so exceptions would not be thrown and halt execution." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sortState check to viewTasks(). Added a check to readFromFile to check if a file exists before loading so exceptions would not be thrown and halt execution." />
+    <MESSAGE value="Cleaned up code based on IDE suggestions, changed formatting of Task.toString()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code based on IDE suggestions, changed formatting of Task.toString()" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tasko/.gitignore">
@@ -425,75 +395,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tasko/src/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;class#Task#0" />
+            <element signature="docComment;method#Task#0;class#Task#0" />
+            <element signature="method#Task#0;class#Task#0" />
+            <element signature="docComment;method#Task#1;class#Task#0" />
+            <element signature="method#Task#1;class#Task#0" />
+            <element signature="method#Task#2;class#Task#0" />
+            <element signature="e#1449#1450#0" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
+            <element signature="method#toString#0;class#Task#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tasko/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tasko/src/TaskFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="144" column="7" lean-forward="true" selection-start-line="144" selection-start-column="7" selection-end-line="144" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#TaskFactory#0" />
-            <element signature="docComment;method#TaskFactory#0;class#TaskFactory#0" />
-            <element signature="docComment;method#addTask#0;class#TaskFactory#0" />
-            <element signature="method#addTask#0;class#TaskFactory#0" />
-            <element signature="e#726#1140#1" />
-            <element signature="e#896#947#1" />
-            <element signature="e#953#1130#1" />
-            <element signature="docComment;method#isRunState#0;class#TaskFactory#0" />
-            <element signature="docComment;method#viewTasks#0;class#TaskFactory#0" />
-            <element signature="method#viewTasks#0;class#TaskFactory#0" />
-            <element signature="e#2060#2527#0" />
-            <element signature="e#1865#1951#1" />
-            <element signature="docComment;method#sortAscPriority#0;class#TaskFactory#0" />
-            <element signature="method#sortAscPriority#0;class#TaskFactory#0" />
-            <element signature="docComment;method#sortDscPriority#0;class#TaskFactory#0" />
-            <element signature="method#sortDscPriority#0;class#TaskFactory#0" />
-            <element signature="docComment;method#sortAscContext#0;class#TaskFactory#0" />
-            <element signature="method#sortAscContext#0;class#TaskFactory#0" />
-            <element signature="docComment;method#sortDscContext#0;class#TaskFactory#0" />
-            <element signature="method#sortDscContext#0;class#TaskFactory#0" />
-            <element signature="docComment;method#sortAscTime#0;class#TaskFactory#0" />
-            <element signature="method#sortAscTime#0;class#TaskFactory#0" />
-            <element signature="docComment;method#sortDscTime#0;class#TaskFactory#0" />
-            <element signature="method#sortDscTime#0;class#TaskFactory#0" />
-            <element signature="docComment;method#deleteTask#0;class#TaskFactory#0" />
-            <element signature="method#deleteTask#0;class#TaskFactory#0" />
-            <element signature="docComment;method#commandHeader#0;class#TaskFactory#0" />
-            <element signature="method#commandHeader#0;class#TaskFactory#0" />
-            <element signature="docComment;method#menuOptions#0;class#TaskFactory#0" />
-            <element signature="method#menuOptions#0;class#TaskFactory#0" />
-            <element signature="e#4889#5696#0" />
-            <element signature="docComment;method#writeToFile#0;class#TaskFactory#0" />
-            <element signature="method#writeToFile#0;class#TaskFactory#0" />
-            <element signature="e#6052#6078#0" />
-            <element signature="e#6310#6396#1" />
-            <element signature="e#6278#6322#0" />
-            <element signature="e#6540#6567#0" />
-            <element signature="e#6558#6593#0" />
-            <element signature="e#6660#6712#0" />
-            <element signature="docComment;method#readFromFile#0;class#TaskFactory#0" />
-            <element signature="method#readFromFile#0;class#TaskFactory#0" />
-            <element signature="e#7638#8367#1" />
-            <element signature="e#6877#7065#0" />
-            <element signature="e#7006#7063#1" />
-            <element signature="e#8137#8189#0" />
-            <element signature="e#7352#7381#0" />
-            <element signature="e#7382#7417#1" />
-            <element signature="e#7404#7455#0" />
-            <element signature="e#7478#7538#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasko/src/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+        <state relative-caret-position="-1408">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
