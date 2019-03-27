@@ -1,6 +1,4 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 /**
@@ -147,7 +145,7 @@ public class TaskFactory {
     /**
      * Sorts the Time in a ascending order
      */
-    private void sortAscTime() {
+    public void sortAscTime() {
 
         Collections.sort(taskList, new Comparator<Task>(){
 
@@ -243,7 +241,7 @@ public class TaskFactory {
     }
 
     /**
-     * Write the taskList to a .csv formatted file
+     * Write the taskList to a .csv tab delineated format file
      */
     public void writeToFile() {
         BufferedWriter bw = null;
@@ -255,8 +253,8 @@ public class TaskFactory {
 
             for (Task x :
                     taskList) {
-                bw.write(x.getSummary() + ", "
-                + x.getPriority() + ", "
+                bw.write(x.getSummary() + "\t"
+                + x.getPriority() + "\t"
                 + x.getCreationTime() + "\n");
             }
 
@@ -273,6 +271,40 @@ public class TaskFactory {
 
             } catch (IOException e) {
                 e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * Read input from a tab delineated file and load individual tasks into a new
+     * taskList array.
+     */
+    public void readFromFile() {
+        BufferedReader br = null;
+        String line = "";
+        String splitBy = "\t";
+
+        try {
+
+            br = new BufferedReader(new FileReader(FILENAME));
+            while ((line = br.readLine()) != null) {
+
+                String[] rawTasks = line.split(splitBy);
+                Task tempTask = new Task(rawTasks[0], rawTasks[1], rawTasks[2]);
+                taskList.add(tempTask);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
