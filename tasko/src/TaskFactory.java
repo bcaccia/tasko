@@ -118,6 +118,13 @@ private void sortAscTime() {
 
     }
 
+    private void deleteTask() {
+        System.out.println("Enter task # to delete: ");
+        String userInput = input.nextLine();
+        int choice = Integer.parseInt(userInput);
+        taskList.remove(choice);
+    }
+
     public void commandHeader() {
         System.out.println("_____________________________________________________________________________");
         System.out.println("Commands: a(add) | d(delete) | p(priority) | c(context) | t(time) | q(quit)");
@@ -135,8 +142,7 @@ private void sortAscTime() {
                 break;
 
             case 'd':
-                System.out.println("d");
-//                TODO implement deleting a task from the list
+                deleteTask();
                 break;
 
             case 'p':
