@@ -12,6 +12,12 @@ public class Task {
     private String context;
     private String creationTime;
 
+    /**
+     * This constructor is used when the program is running and creates a new task
+     * @param summary
+     * @param priority
+     * @param context
+     */
     public Task(String summary, String priority, String context) {
         this.summary = summary;
         this.priority = priority;
@@ -19,6 +25,21 @@ public class Task {
         LocalDateTime localTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         this.creationTime = localTime.format(formatter);
+    }
+
+    /**
+     * This constructor takes 4 arguments and is used when loading data back from a file so that
+     * the timestamp is maintained and not replaced.
+     * @param summary
+     * @param priority
+     * @param context
+     * @param creationTime
+     */
+    public Task(String summary, String priority, String context, String creationTime) {
+        this.summary = summary;
+        this.priority = priority;
+        this.context = context;
+        this.creationTime = creationTime;
     }
 
     public Task() {

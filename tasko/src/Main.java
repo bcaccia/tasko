@@ -4,8 +4,6 @@ public class Main {
     public static void main(String[] args) {
         TaskFactory taskFactory = new TaskFactory();
         taskFactory.readFromFile();
-        // Sort task list by ascending value in the time column
-        taskFactory.sortAscTime();
 
         while (taskFactory.isRunState()) {
             taskFactory.commandHeader();

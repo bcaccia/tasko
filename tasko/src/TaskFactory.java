@@ -11,6 +11,7 @@ public class TaskFactory {
 
     private ArrayList<Task> taskList = new ArrayList<>();
     private Task newTask;
+    private String sortState = "t";
     private static final String FILENAME = "taskList.csv";
 
     /**
@@ -63,6 +64,7 @@ public class TaskFactory {
     /**
      * This is the getter for the instances runState variable. When the user chooses to quit the program
      * it is set to false which causes the main() loop to quit
+     *
      * @return a boolean
      */
     public boolean isRunState() {
@@ -73,6 +75,28 @@ public class TaskFactory {
      * Prints out the contents of the taskList array to the screen
      */
     public void viewTasks() {
+        switch (sortState) {
+            case "p":
+                sortAscPriority();
+                break;
+            case "P":
+                sortDscPriority();
+                break;
+            case "c":
+                sortAscContext();
+                break;
+            case "C":
+                sortDscContext();
+                break;
+            case "t":
+                sortAscTime();
+                break;
+            case "T":
+                sortDscTime();
+                break;
+        }
+
+
         int i = 0;
         for (Task x :
                 taskList) {
@@ -87,7 +111,7 @@ public class TaskFactory {
      */
     private void sortAscPriority() {
 
-        Collections.sort(taskList, new Comparator<Task>(){
+        Collections.sort(taskList, new Comparator<Task>() {
 
             public int compare(Task t1, Task t2) {
 
@@ -102,7 +126,7 @@ public class TaskFactory {
      */
     private void sortDscPriority() {
 
-        Collections.sort(taskList, new Comparator<Task>(){
+        Collections.sort(taskList, new Comparator<Task>() {
 
             public int compare(Task t1, Task t2) {
 
@@ -117,7 +141,7 @@ public class TaskFactory {
      */
     private void sortAscContext() {
 
-        Collections.sort(taskList, new Comparator<Task>(){
+        Collections.sort(taskList, new Comparator<Task>() {
 
             public int compare(Task t1, Task t2) {
 
@@ -132,7 +156,7 @@ public class TaskFactory {
      */
     private void sortDscContext() {
 
-        Collections.sort(taskList, new Comparator<Task>(){
+        Collections.sort(taskList, new Comparator<Task>() {
 
             public int compare(Task t1, Task t2) {
 
@@ -147,7 +171,7 @@ public class TaskFactory {
      */
     public void sortAscTime() {
 
-        Collections.sort(taskList, new Comparator<Task>(){
+        Collections.sort(taskList, new Comparator<Task>() {
 
             public int compare(Task t1, Task t2) {
 
@@ -162,7 +186,7 @@ public class TaskFactory {
      */
     private void sortDscTime() {
 
-        Collections.sort(taskList, new Comparator<Task>(){
+        Collections.sort(taskList, new Comparator<Task>() {
 
             public int compare(Task t1, Task t2) {
 
@@ -254,8 +278,9 @@ public class TaskFactory {
             for (Task x :
                     taskList) {
                 bw.write(x.getSummary() + "\t"
-                + x.getPriority() + "\t"
-                + x.getCreationTime() + "\n");
+                        + x.getPriority() + "\t"
+                        + x.getContext() + "\t"
+                        + x.getCreationTime() + "\n");
             }
 
 
@@ -281,32 +306,39 @@ public class TaskFactory {
      */
     public void readFromFile() {
         BufferedReader br = null;
+        File f = new File(".", FILENAME);
         String line = "";
         String splitBy = "\t";
 
-        try {
+        // Check if the file exists first. If it doesn't, continue on with the execution of the program.
+        if (f.exists()) {
+            try {
 
-            br = new BufferedReader(new FileReader(FILENAME));
-            while ((line = br.readLine()) != null) {
+                br = new BufferedReader(new FileReader(FILENAME));
 
-                String[] rawTasks = line.split(splitBy);
-                Task tempTask = new Task(rawTasks[0], rawTasks[1], rawTasks[2]);
-                taskList.add(tempTask);
-            }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                while ((line = br.readLine()) != null) {
+
+                    String[] rawTasks = line.split(splitBy);
+                    Task tempTask = new Task(rawTasks[0], rawTasks[1], rawTasks[2], rawTasks[3]);
+                    taskList.add(tempTask);
+                }
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (br != null) {
+                    try {
+                        br.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
+        } else {
+
         }
     }
-
 }
