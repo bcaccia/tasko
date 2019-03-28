@@ -4,12 +4,12 @@ import java.util.*;
 /**
  * This class contains most of the methods and logic for the program.
  */
-public class TaskFactory {
+class TaskFactory {
 
-    private Scanner input;
+    private final Scanner input;
     private boolean runState = true;
     private String sortState = "t";
-    private ArrayList<Task> taskList = new ArrayList<>();
+    private final ArrayList<Task> taskList = new ArrayList<>();
     private static final String FILENAME = "taskList.csv";
 
     /**
@@ -142,7 +142,7 @@ public class TaskFactory {
     /**
      * Sorts the Time in a ascending order
      */
-    public void sortAscTime() {
+    private void sortAscTime() {
 
         taskList.sort((t1, t2) -> String.valueOf(t1.getCreationTime()).compareTo(t2.getCreationTime()));
 
@@ -232,7 +232,7 @@ public class TaskFactory {
     }
 
     /**
-     * Write the taskList to a .csv tab delineated format file
+     * Write the taskList to a .csv tab delimited format file
      */
     public void writeToFile() {
         BufferedWriter bw = null;
@@ -268,7 +268,7 @@ public class TaskFactory {
     }
 
     /**
-     * Read input from a tab delineated file and load individual tasks into a new
+     * Read input from a tab delimited file and load individual tasks into a new
      * taskList array.
      */
     public void readFromFile() {

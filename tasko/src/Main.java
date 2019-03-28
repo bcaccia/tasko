@@ -1,5 +1,5 @@
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
         TaskFactory taskFactory = new TaskFactory();
@@ -14,16 +14,5 @@ public class Main {
         taskFactory.writeToFile();
 
     }
-
-//	public static void helpPage() {
-//		System.out.println("_____________________________________________________");
-//		System.out.println("\ntasko usage:");
-//		System.out.println("\nCommand format: tasko taskSummary -priority -context");
-//		System.out.println("Example command: tasko pay my bills -h -computer");
-//		System.out.println("_____________________________________________________");
-//	}
-//
-
-//
 
 }
